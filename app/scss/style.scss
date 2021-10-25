@@ -592,4 +592,42 @@
         font-size: 60px;
         line-height: 80px;
     }
+    &__content{
+        padding: 130px 0 40px;
+    }
+    &__title{
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        max-width: 822px;
+        color: $title;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background: #6D7278;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__text{
+        padding-left: 284px;
+        p{
+            margin-bottom: 40px;
+        }
+    }
+    &__popup{
+        background: url(../images/popup-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        min-height: 414px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
