@@ -1,4 +1,5 @@
 $(function () {
+    // Rightside menu
     $(".header__btn").on('click', function () {
         $(".rightside-menu").removeClass("rightside-menu--close")
     })
@@ -6,6 +7,8 @@ $(function () {
         $(".rightside-menu").addClass("rightside-menu--close")
     })
 
+
+    // Sliders
     $('.top__slider').slick({
         dots: true,
         arrows: false,
@@ -13,6 +16,15 @@ $(function () {
         autoplay: true,
     });
 
+    $('.contact__slider').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 10,
+        slidesToScroll: 10,
+    });
+
+
+    // Mixit Up
     const mixer = mixitup('.gallery__inner', {
         load: {
             filter: '.living',

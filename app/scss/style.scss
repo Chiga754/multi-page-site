@@ -73,24 +73,6 @@
     &__info-text{
         margin-bottom: 16px;
     }
-    &__info-email{
-        font-weight: 600;
-        font-size: 14px;
-        color: $title;
-        padding-left: 30px;
-        display: inline-block;
-        margin-bottom: 22px;
-        position: relative;
-        &::before{
-            content: '';
-            position: absolute;
-            background-image: url(../images/envelope.svg);
-            left: 0;
-            top: 9px;
-            width: 16px;
-            height: 12px;
-        }
-    }
     &__form{
         display: flex;
     }
@@ -239,6 +221,8 @@
 .breadcrumbs{
     background: rgba(#DFDFDF, .5);
     padding: 13px 0;
+    position: relative;
+    z-index: 999;
     &__list{
         display: flex;
     }
@@ -714,5 +698,132 @@
     }
     &__item{
         margin: 0 auto;
+    }
+}
+.map{
+    margin-top: -53px;
+    margin-bottom: 50px;
+}
+.contact{
+    padding-bottom: 100px;
+    &__left{
+        padding-left: 248px;
+    }
+    &__title{
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 200px;
+            bottom: 0;
+            left: 0;
+            background: #6D7278;
+        }
+    }
+    &__text{
+        font-size: 16px;
+        line-height: 28px;
+        color: #A1A1A1;
+    }
+    &__social{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__social-item + .contact__social-item{
+        padding-left: 40px;
+    }
+    &__phone,
+    &__st,
+    &__sity{
+        font-size: 16px;
+        line-height: 27px;
+        color: $default;
+    }
+    &__sity{
+        margin-bottom: 16px;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form-input{
+        width: 48%;
+        border: 1px solid #DFDFDF;
+        border-radius: 20px;
+        padding: 6px 17px;
+        margin-bottom: 13px;
+        &::placeholder{
+            font-size: 16px;
+            line-height: 28px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-area{
+        width: 100%;
+        height: 125px;
+        border-radius: 20px;
+        border: 1px solid #DFDFDF;
+        padding: 6px 17px;
+        resize: none;
+        margin-bottom: 20px;
+        &::placeholder{
+            font-size: 16px;
+            line-height: 28px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-btn{
+        background: #363838;
+        border: none;
+        border-radius: 21px;
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        color: #FFFFF0;
+        padding: 6px 12px;
+        width: 180px;
+        height: 40px;
+        cursor: pointer;
+    }
+}
+.contact__slider{
+    &-item{
+        position: relative;
+        &:hover{
+            .contact__slider-title{
+                opacity: 1;
+            }
+        }
+    }
+    &-img{
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+    &-title{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba($color: #fff, $alpha: .6) ;
+        color: $title;
+        @extend %title-font;
+        padding: 0 5px;
+        text-align: center;
+        transition: all .5s;
+        opacity: 0;
     }
 }
