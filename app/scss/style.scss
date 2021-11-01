@@ -731,6 +731,7 @@
         font-size: 16px;
         line-height: 28px;
         color: #A1A1A1;
+        padding-bottom: 25px;
     }
     &__social{
         display: flex;
@@ -825,5 +826,104 @@
         text-align: center;
         transition: all .5s;
         opacity: 0;
+    }
+}
+
+.blog{
+    padding: 60px 0 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__category{
+        margin-bottom: 36px;
+    }
+    &__category-title{
+        margin-bottom: 15px;
+        line-height: 23px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__category-item{
+        margin-bottom: 12px;
+    }
+    &__category-link{
+        color: inherit;
+    }
+    &__social{
+        display: flex;
+        &-item{
+            margin-right: 20px;
+        }
+    }
+}
+.aside{
+    width: 350px;
+    margin-left: 30px;
+    &__search{
+       position: relative;
+       margin-bottom: 40px;
+    }
+    &__search-input{
+        padding: 6px 45px 6px 18px;
+        border: 1px solid rgba(#383636, $alpha: .7);
+        border-radius: 20px;
+        width: 100%;
+        &::placeholder{     
+            font-size: 14px;
+            line-height: 27px;
+            font-weight: 400;
+            color: #a1a1a1;
+        }
+    }
+    &__search-btn{
+         background-color: transparent;
+         border: none;
+         position: absolute;
+         top: 10px;
+         right: 13px;
+    }
+}
+
+.recent__posts{
+    margin-bottom: 40px;
+    &-title{
+        margin-bottom: 24px;
+        line-height: 23px;
+        color: $title;
+        @extend %title-font;
+    }
+    &-item{
+        margin-bottom: 11px;
+    }
+    &-item-title{
+        display: block;
+        color: inherit;
+    }
+    &-date,
+    &-author{
+        font-size: 14px;
+        color: #A1A1A1;
+    }
+
+}
+.blog__tegs{
+    margin-bottom: 50px;
+    &-title{
+        margin-bottom: 24px;
+        line-height: 23px;
+        color: $title;
+        @extend %title-font;
+    }
+    &-link{
+        font-weight: 600;
+        font-size: 14px;
+        color: #8F8D8D;
+        padding: 0 14px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        border: 1px solid rgba(#454647, .5);
+        border-radius: 14px;
     }
 }
