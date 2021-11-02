@@ -856,7 +856,101 @@
             margin-right: 20px;
         }
     }
+    &__items{
+        max-width: 730px;
+    }
+    &__item{
+        margin-bottom: 80px;
+    }
+    &__item-img{
+        max-width: 730px;
+    }
+    &__item-info{
+        padding: 25px 0 10px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #707070;
+        a{
+            color: inherit;
+        }
+    }
+    &__item-title{
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 6px;
+        color: $title;
+        @extend %title-font;
+    }
+
+    &__blockquote{
+        background: rgba(223, 223, 223, 0.5);
+        margin-bottom: 50px;
+        padding: 54px 64px;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 38px;
+        text-align: center;
+        color: #363838;
+    }
+    &__blockquote-author{
+        margin-top: 23px;
+        padding-top: 23px;
+        @extend %title-font;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: $title;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 1px;
+            background: #6D7278;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            border-radius: 1px;
+        }
+    }
+
+    &__item-popup{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
+.article-popup{
+    &__box{
+        position: relative;
+    }
+}
+.article-slider{
+    position: relative;
+    &-arrow{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        z-index: 10;
+    }
+    &-arrowleft{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 16px;
+    }
+    &-arrowright{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 16px;
+    }
+}
+
+
 .aside{
     width: 350px;
     margin-left: 30px;
@@ -925,5 +1019,31 @@
         display: inline-block;
         border: 1px solid rgba(#454647, .5);
         border-radius: 14px;
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list{
+        display: flex;
+        &-item{
+            margin: 0 6px;
+        }
+        &-num{
+            font-weight: 600;
+            font-size: 14px;
+            color: #707070;
+        }
+        &-num--active{
+            color: #363838;
+        }
+    }
+    &__arrow{
+        margin: 0 6px;
+    }
+    &__arrow-disabled{
+        display: none;
     }
 }
