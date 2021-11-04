@@ -1047,3 +1047,119 @@
         display: none;
     }
 }
+
+.blog-one__tags{
+    margin-bottom: 10px ;
+    &-title{
+        @extend %title-font;
+        color: $title;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 15px;
+    }
+    &-link{
+        font-weight: 600;
+        font-size: 14px;
+        color: #8F8D8D;
+        padding: 0 14px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        border: 1px solid rgba(69,70,71,0.5);
+        border-radius: 14px;
+    }
+}
+
+.blog-one{
+    &__links{
+        padding: 40px 0px 30px;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    &__link{
+        max-width: 243px;
+        position: relative;
+        color: #707070;
+        font-size: 14px;
+        font-weight: 600;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 23px;
+        }
+    }
+    &__link-prev{
+        padding-left: 44px;
+        &::after{
+            background: url(../images/arrow-prev.svg);
+            left: 0;
+        }
+    }
+    &__link-next{
+        padding-right: 44px;
+        text-align: right;
+        &::after{
+            background: url(../images/arrow-next.svg);
+            right: 0;
+        }
+    }
+    &__comments-title{
+        color: $title;
+        @extend %title-font;
+        line-height: 31px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &__comments-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    &__comments-avatar{
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 13px;
+    }
+    &__comments-reply{
+        background-color: transparent;
+        margin-left: 5px;
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #707070;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__comments-name{
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+    }
+    &__comments-date{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+    &__form-textarea{
+        order: -1;
+    }
+    &__form-label{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #a1a1a1;
+    }
+}
