@@ -3,7 +3,6 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
 // HEADER
 .header{
     &__inner{
@@ -13,6 +12,12 @@
         height: 120px;
     }
     &__btn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    &__btn-menu{
+        display: none;
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -222,14 +227,18 @@
     background: rgba(#DFDFDF, .5);
     padding: 13px 0;
     position: relative;
-    z-index: 999;
+    z-index: 5;
     &__list{
         display: flex;
+        overflow-x: auto;
+    }
+    &__item{
+        position: relative;
+        padding-right: 8px;
     }
     &__item::after{
         content: '/';
-        margin-left: -4px;
-        margin-right: 4px;
+        position: absolute;
     }
     &__item:last-child::after{
         display: none;
@@ -1163,3 +1172,5 @@
         color: #a1a1a1;
     }
 }
+
+@import 'media';
